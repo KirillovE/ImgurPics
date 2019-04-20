@@ -18,6 +18,8 @@
 		3E14E880226AF61A006B8752 /* DataRequest+responseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E87B226AF4D2006B8752 /* DataRequest+responseCodable.swift */; };
 		3E14E881226AF61A006B8752 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E87C226AF4D2006B8752 /* RequestRouter.swift */; };
 		3E14E882226AF61A006B8752 /* AbstractErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E87D226AF4D2006B8752 /* AbstractErrorHandler.swift */; };
+		3E14E886226AF747006B8752 /* AlertErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E884226AF747006B8752 /* AlertErrorHandler.swift */; };
+		3E14E887226AF747006B8752 /* AppErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E885226AF747006B8752 /* AppErrorParser.swift */; };
 		D1B25C8A43915ACA004E4DA4 /* Pods_SpiderImgur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		3E14E87B226AF4D2006B8752 /* DataRequest+responseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+responseCodable.swift"; sourceTree = "<group>"; };
 		3E14E87C226AF4D2006B8752 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		3E14E87D226AF4D2006B8752 /* AbstractErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorHandler.swift; sourceTree = "<group>"; };
+		3E14E884226AF747006B8752 /* AlertErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertErrorHandler.swift; sourceTree = "<group>"; };
+		3E14E885226AF747006B8752 /* AppErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppErrorParser.swift; sourceTree = "<group>"; };
 		6C3651C828E408A156661245 /* Pods-SpiderImgur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderImgur.release.xcconfig"; path = "Target Support Files/Pods-SpiderImgur/Pods-SpiderImgur.release.xcconfig"; sourceTree = "<group>"; };
 		BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderImgur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +127,7 @@
 		3E14E874226AEE8F006B8752 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3E14E883226AF732006B8752 /* Bussiness logic */,
 				3E14E854226AEDA4006B8752 /* AppDelegate.swift */,
 				3E14E856226AEDA4006B8752 /* ViewController.swift */,
 				3E14E858226AEDA4006B8752 /* Main.storyboard */,
@@ -165,6 +170,15 @@
 				3E14E87D226AF4D2006B8752 /* AbstractErrorHandler.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		3E14E883226AF732006B8752 /* Bussiness logic */ = {
+			isa = PBXGroup;
+			children = (
+				3E14E885226AF747006B8752 /* AppErrorParser.swift */,
+				3E14E884226AF747006B8752 /* AlertErrorHandler.swift */,
+			);
+			path = "Bussiness logic";
 			sourceTree = "<group>";
 		};
 		F9CF029D68A03C13AE813311 /* Frameworks */ = {
@@ -328,7 +342,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E14E857226AEDA4006B8752 /* ViewController.swift in Sources */,
+				3E14E887226AF747006B8752 /* AppErrorParser.swift in Sources */,
 				3E14E87E226AF61A006B8752 /* AbstractRequestFactory.swift in Sources */,
+				3E14E886226AF747006B8752 /* AlertErrorHandler.swift in Sources */,
 				3E14E881226AF61A006B8752 /* RequestRouter.swift in Sources */,
 				3E14E882226AF61A006B8752 /* AbstractErrorHandler.swift in Sources */,
 				3E14E855226AEDA4006B8752 /* AppDelegate.swift in Sources */,
