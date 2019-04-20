@@ -34,8 +34,8 @@ class ImageDecodingTests: XCTestCase {
         let successIsValid = response?.success == true
         let dataIdIsValid = response?.data.first?.id == "H0TBp"
         let dataTitleIsValid = response?.data.first?.title == "It's nice to be nice dump"
-        let imageIdIsValid = response?.data.first?.images.first?.id == "tiAxps3"
-        let imageLinkIsValid = response?.data.first?.images.first?.link == "https://i.imgur.com/tiAxps3.jpg"
+        let imageIdIsValid = response?.data.first?.images?.first?.id == "tiAxps3"
+        let imageLinkIsValid = response?.data.first?.images?.first?.link == "https://i.imgur.com/tiAxps3.jpg"
         
         return statusIsValid
             && successIsValid

@@ -56,7 +56,7 @@ class RequestFactoryTests: XCTestCase {
         oStubsHelper.setGetStub(with: responseStubURL, pathEnd: "gallery/top/top/all/\(page)")
         
         requestFactory.fetchImages(page: page) { [weak self] response in
-            let imageID = response.data.first?.images.first?.id
+            let imageID = response.data.first?.images?.first?.id
             XCTAssertEqual(imageID, "tiAxps3", self!.failureMessage)
             expectation.fulfill()
         }
