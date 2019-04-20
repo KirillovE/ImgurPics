@@ -1,6 +1,0 @@
-framework module Pods_SpiderImgur {
-  umbrella header "Pods-SpiderImgur-umbrella.h"
-
-  export *
-  module * { export * }
-}
