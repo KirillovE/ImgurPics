@@ -14,12 +14,12 @@ protocol RequestsFactoryMaker {
     /// - Parameters:
     ///   - page: Номер страницы с изображениями
     ///   - completion: Завершающий блок с полученными изображениями
-    func fetchImages(page: Int, completion: @escaping ([Image]) -> Void)
+    func fetchImages(page: Int, completion: @escaping (ImageResponse) -> Void)
     
     /// Скачивание комментариев для изображения или галереи
     ///
     /// - Parameters:
     ///   - imageID: Идентификатор изображения или галереи
     ///   - comletion: Завершающий блок с полученными комментариями
-    func fetchComments(forImage imageID: String, completion: @escaping ([Comment]) -> Void)
+    func fetchComments(forImage imageID: String, completion: @escaping (CommentResponse) -> Void)
 }

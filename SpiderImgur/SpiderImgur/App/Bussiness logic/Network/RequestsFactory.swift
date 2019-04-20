@@ -10,12 +10,12 @@ import Alamofire
 
 final class RequestsFactory: BaseRequestFactory, RequestsFactoryMaker {
     
-    func fetchImages(page: Int = 0, completion: @escaping ([Image]) -> Void) {
+    func fetchImages(page: Int = 0, completion: @escaping (ImageResponse) -> Void) {
         let router = ImageRequest(baseURL: baseURL, page: page)
         request(request: router, completion: completion)
     }
     
-    func fetchComments(forImage imageID: String, completion: @escaping ([Comment]) -> Void) {
+    func fetchComments(forImage imageID: String, completion: @escaping (CommentResponse) -> Void) {
         let router = CommentRequest(baseURL: baseURL, imageID: imageID)
         request(request: router, completion: completion)
     }
