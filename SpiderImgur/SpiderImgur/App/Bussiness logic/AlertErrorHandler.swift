@@ -9,10 +9,9 @@
 import UIKit
 
 /// Обработчик, выводящий ошибки в виде графического предупреждения
-final class AlertErrorHandler: AbstractErrorHandler {
+struct AlertErrorHandler: AbstractErrorHandler {
     
     func handle(_ error: Error) {
-        
         DispatchQueue.main.async {
             guard let host = self.getTopController() else { return }
             

@@ -20,7 +20,7 @@ enum AppError: String, Error {
 }
 
 /// Анализатор ошибок, использующий специфичные для приложения типы ошибок
-final class AppErrorParser: AbstractErrorParser {
+struct AppErrorParser: AbstractErrorParser {
     func parse(_ result: Error) -> Error {
         switch result {
         case _ where result is DecodingError:
