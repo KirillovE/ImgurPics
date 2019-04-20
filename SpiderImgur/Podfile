@@ -1,8 +1,14 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
-use_frameworks!
+platform :ios, '12.0'
 
 target 'SpiderImgur' do
-    pod 'AlamofireImage', '~> 3.5'
-    pod 'OHHTTPStubs/Swift'
+  use_frameworks!
+  
+  pod 'AlamofireImage', '~> 3.5'
+  pod 'OHHTTPStubs/Swift'
+  
+  target 'SpiderImgurTests' do
+    inherit! :search_paths
+  end
+  
 end
