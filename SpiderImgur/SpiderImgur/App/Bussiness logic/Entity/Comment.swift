@@ -15,6 +15,6 @@ struct CommentResponse: Decodable {
 
 /// Комментарий
 struct Comment: Decodable {
-    let id: String
+    let id: Int
     let comment: String
 }
