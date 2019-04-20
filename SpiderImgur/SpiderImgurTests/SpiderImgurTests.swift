@@ -9,26 +9,39 @@
 import XCTest
 @testable import SpiderImgur
 
-class SpiderImgurTests: XCTestCase {
+/// Тестиривание декодирования ответа на запрос изображений
+class ImageDecodingTests: XCTestCase {
+    
+    let decoder = JSONDecoder()
+    var resultStub = Data()
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let resultFileBundle = Bundle(for: ImageDecodingTests.self)
+        let resultFileURL = resultFileBundle.url(forResource: "ImageResponseStub", withExtension: "json")!
+        resultStub = try! Data(contentsOf: resultFileURL)
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testImageResultDecoding() {
+        let imageResponse = try? decoder.decode(ImageResponse.self, from: resultStub)
+        XCTAssertNotNil(imageResponse, "Не удалось декодировать ответ")
+        XCTAssertTrue(validateFields(ofResponse: imageResponse), "Неверное декодирование")
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    private func validateFields(ofResponse response: ImageResponse?) -> Bool {
+        let statusIsValid = response?.status == 200
+        let successIsValid = response?.success == true
+        let dataIdIsValid = response?.data.first?.id == "H0TBp"
+        let dataTitleIsValid = response?.data.first?.title == "It's nice to be nice dump"
+        let imageIdIsValid = response?.data.first?.images.first?.id == "tiAxps3"
+        let imageLinkIsValid = response?.data.first?.images.first?.link == "https://i.imgur.com/tiAxps3.jpg"
+        
+        return statusIsValid
+            && successIsValid
+            && dataIdIsValid
+            && dataTitleIsValid
+            && imageIdIsValid
+            && imageLinkIsValid
     }
 
 }
