@@ -7,14 +7,14 @@
 //
 
 /// Ответ сервера на запрос
-struct ImageResponse {
-    let data: ImageData
+struct ImageResponse: Decodable {
+    let data: [ImageData]
     let success: Bool
     let status: Int
 }
 
 /// Информация об изображении с сервера
-struct ImageData {
+struct ImageData: Decodable {
     let id: String
     let title: String
     let images: [Image]
