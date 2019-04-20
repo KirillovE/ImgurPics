@@ -4,4 +4,5 @@ use_frameworks!
 
 target 'SpiderImgur' do
     pod 'AlamofireImage', '~> 3.5'
+    pod 'OHHTTPStubs/Swift'
 end
