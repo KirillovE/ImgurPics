@@ -9,26 +9,34 @@
 import XCTest
 @testable import SpiderImgur
 
+/// Тестиривание декодирования ответа на запрос комментариев
 class CommentDecodingTests: XCTestCase {
+    
+    let decoder = JSONDecoder()
+    var resultStub = Data()
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        let resultFileBundle = Bundle(for: CommentDecodingTests.self)
+        let resultFileURL = resultFileBundle.url(forResource: "CommentResponseStub", withExtension: "json")!
+        resultStub = try! Data(contentsOf: resultFileURL)
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let commentResponse = try? decoder.decode(CommentResponse.self, from: resultStub)
+        XCTAssertNotNil(commentResponse, "Не удалось декодировать ответ")
+        XCTAssertTrue(validateFields(ofResponse: commentResponse), "Неверное декодирование")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    private func validateFields(ofResponse response: CommentResponse?) -> Bool {
+        let statusIsValid = response?.status == 200
+        let successIsValid = response?.success == true
+        let commentIdIsValid = response?.data.first?.id == 1053911831
+        let commentTextIsValid = response?.data.first?.comment == "Onions.  Onions everywhere"
+        
+        return statusIsValid
+            && successIsValid
+            && commentIdIsValid
+            && commentTextIsValid
     }
 
 }
