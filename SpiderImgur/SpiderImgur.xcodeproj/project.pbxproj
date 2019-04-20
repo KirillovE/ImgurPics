@@ -130,9 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				3E14E883226AF732006B8752 /* Bussiness logic */,
-				3E14E854226AEDA4006B8752 /* AppDelegate.swift */,
-				3E14E856226AEDA4006B8752 /* ViewController.swift */,
-				3E14E858226AEDA4006B8752 /* Main.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -177,6 +174,9 @@
 		3E14E883226AF732006B8752 /* Bussiness logic */ = {
 			isa = PBXGroup;
 			children = (
+				3E14E854226AEDA4006B8752 /* AppDelegate.swift */,
+				3E14E88D226B081A006B8752 /* Flow */,
+				3E14E88C226B080B006B8752 /* Entity */,
 				3E14E889226AFF17006B8752 /* Network */,
 				3E14E888226AF99E006B8752 /* Errors */,
 			);
@@ -198,6 +198,22 @@
 				3E14E88A226AFF28006B8752 /* BaseRequestFactory.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		3E14E88C226B080B006B8752 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3E14E88D226B081A006B8752 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				3E14E856226AEDA4006B8752 /* ViewController.swift */,
+				3E14E858226AEDA4006B8752 /* Main.storyboard */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		F9CF029D68A03C13AE813311 /* Frameworks */ = {
