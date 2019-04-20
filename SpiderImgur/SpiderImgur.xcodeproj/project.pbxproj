@@ -21,6 +21,7 @@
 		3E14E886226AF747006B8752 /* AlertErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E884226AF747006B8752 /* AlertErrorHandler.swift */; };
 		3E14E887226AF747006B8752 /* AppErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E885226AF747006B8752 /* AppErrorParser.swift */; };
 		3E14E88B226AFF28006B8752 /* BaseRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E88A226AFF28006B8752 /* BaseRequestFactory.swift */; };
+		3E14E88F226B09F9006B8752 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E88E226B09F9006B8752 /* Image.swift */; };
 		D1B25C8A43915ACA004E4DA4 /* Pods_SpiderImgur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		3E14E884226AF747006B8752 /* AlertErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertErrorHandler.swift; sourceTree = "<group>"; };
 		3E14E885226AF747006B8752 /* AppErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppErrorParser.swift; sourceTree = "<group>"; };
 		3E14E88A226AFF28006B8752 /* BaseRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestFactory.swift; sourceTree = "<group>"; };
+		3E14E88E226B09F9006B8752 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6C3651C828E408A156661245 /* Pods-SpiderImgur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderImgur.release.xcconfig"; path = "Target Support Files/Pods-SpiderImgur/Pods-SpiderImgur.release.xcconfig"; sourceTree = "<group>"; };
 		BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderImgur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -203,6 +205,7 @@
 		3E14E88C226B080B006B8752 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				3E14E88E226B09F9006B8752 /* Image.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				3E14E882226AF61A006B8752 /* AbstractErrorHandler.swift in Sources */,
 				3E14E855226AEDA4006B8752 /* AppDelegate.swift in Sources */,
 				3E14E87F226AF61A006B8752 /* AbstractErrorParser.swift in Sources */,
+				3E14E88F226B09F9006B8752 /* Image.swift in Sources */,
 				3E14E880226AF61A006B8752 /* DataRequest+responseCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
