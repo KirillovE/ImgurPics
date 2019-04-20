@@ -21,5 +21,5 @@ protocol RequestsFactoryMaker {
     /// - Parameters:
     ///   - imageID: Идентификатор изображения или галереи
     ///   - comletion: Завершающий блок с полученными комментариями
-    func fetchComments(forImage imageID: Int, comletion: @escaping ([Comment]) -> Void)
+    func fetchComments(forImage imageID: String, completion: @escaping ([Comment]) -> Void)
 }
