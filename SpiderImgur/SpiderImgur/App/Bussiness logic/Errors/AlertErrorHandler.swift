@@ -43,8 +43,8 @@ struct AlertErrorHandler: AbstractErrorHandler {
     
     private func getAlert(with text: String) -> UIAlertController {
         let alert = UIAlertController(title: "Ошибка", message: text, preferredStyle: .alert)
-        let oKbutton = UIAlertAction(title: "OK", style: .cancel)
-        alert.addAction(oKbutton)
+        let okButton = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(okButton)
         
         return alert
     }
