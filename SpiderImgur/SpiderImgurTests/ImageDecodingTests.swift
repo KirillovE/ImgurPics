@@ -19,6 +19,8 @@ class ImageDecodingTests: XCTestCase {
         let resultFileBundle = Bundle(for: ImageDecodingTests.self)
         let resultFileURL = resultFileBundle.url(forResource: "ImageResponseStub", withExtension: "json")!
         resultStub = try! Data(contentsOf: resultFileURL)
+        
+        super.setUp()
     }
 
     func testImageResultDecoding() {
