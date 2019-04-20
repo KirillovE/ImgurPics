@@ -175,10 +175,18 @@
 		3E14E883226AF732006B8752 /* Bussiness logic */ = {
 			isa = PBXGroup;
 			children = (
+				3E14E888226AF99E006B8752 /* Errors */,
+			);
+			path = "Bussiness logic";
+			sourceTree = "<group>";
+		};
+		3E14E888226AF99E006B8752 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
 				3E14E885226AF747006B8752 /* AppErrorParser.swift */,
 				3E14E884226AF747006B8752 /* AlertErrorHandler.swift */,
 			);
-			path = "Bussiness logic";
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		F9CF029D68A03C13AE813311 /* Frameworks */ = {
