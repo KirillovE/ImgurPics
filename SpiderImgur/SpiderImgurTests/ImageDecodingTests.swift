@@ -16,7 +16,6 @@ class ImageDecodingTests: XCTestCase {
     var resultStub = Data()
 
     override func setUp() {
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
         let resultFileBundle = Bundle(for: ImageDecodingTests.self)
         let resultFileURL = resultFileBundle.url(forResource: "ImageResponseStub", withExtension: "json")!
         resultStub = try! Data(contentsOf: resultFileURL)
