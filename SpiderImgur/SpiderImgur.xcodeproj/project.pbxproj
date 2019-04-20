@@ -13,6 +13,7 @@
 		3E14E85C226AEDA5006B8752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E14E85B226AEDA5006B8752 /* Assets.xcassets */; };
 		3E14E85F226AEDA5006B8752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E14E85D226AEDA5006B8752 /* LaunchScreen.storyboard */; };
 		3E14E86A226AEDA5006B8752 /* SpiderImgurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E869226AEDA5006B8752 /* SpiderImgurTests.swift */; };
+		D1B25C8A43915ACA004E4DA4 /* Pods_SpiderImgur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20DA11D8F3228AA4B5F8BEF5 /* Pods-SpiderImgur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderImgur.debug.xcconfig"; path = "Target Support Files/Pods-SpiderImgur/Pods-SpiderImgur.debug.xcconfig"; sourceTree = "<group>"; };
 		3E14E851226AEDA4006B8752 /* SpiderImgur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiderImgur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E14E854226AEDA4006B8752 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E14E856226AEDA4006B8752 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		3E14E865226AEDA5006B8752 /* SpiderImgurTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpiderImgurTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E14E869226AEDA5006B8752 /* SpiderImgurTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderImgurTests.swift; sourceTree = "<group>"; };
 		3E14E86B226AEDA5006B8752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C3651C828E408A156661245 /* Pods-SpiderImgur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderImgur.release.xcconfig"; path = "Target Support Files/Pods-SpiderImgur/Pods-SpiderImgur.release.xcconfig"; sourceTree = "<group>"; };
+		BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderImgur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B25C8A43915ACA004E4DA4 /* Pods_SpiderImgur.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DF73D2A43A7526B042ED9A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20DA11D8F3228AA4B5F8BEF5 /* Pods-SpiderImgur.debug.xcconfig */,
+				6C3651C828E408A156661245 /* Pods-SpiderImgur.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3E14E848226AEDA4006B8752 = {
 			isa = PBXGroup;
 			children = (
 				3E14E853226AEDA4006B8752 /* SpiderImgur */,
 				3E14E868226AEDA5006B8752 /* SpiderImgurTests */,
 				3E14E852226AEDA4006B8752 /* Products */,
+				0DF73D2A43A7526B042ED9A9 /* Pods */,
+				F9CF029D68A03C13AE813311 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F9CF029D68A03C13AE813311 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E14E86E226AEDA5006B8752 /* Build configuration list for PBXNativeTarget "SpiderImgur" */;
 			buildPhases = (
+				BA7CDDE25A09717B2D46E8E7 /* [CP] Check Pods Manifest.lock */,
 				3E14E84D226AEDA4006B8752 /* Sources */,
 				3E14E84E226AEDA4006B8752 /* Frameworks */,
 				3E14E84F226AEDA4006B8752 /* Resources */,
+				EFD7FA27581ED04886BF5640 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +250,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA7CDDE25A09717B2D46E8E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpiderImgur-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFD7FA27581ED04886BF5640 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpiderImgur/Pods-SpiderImgur-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiderImgur/Pods-SpiderImgur-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E14E84D226AEDA4006B8752 /* Sources */ = {
@@ -390,6 +466,7 @@
 		};
 		3E14E86F226AEDA5006B8752 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20DA11D8F3228AA4B5F8BEF5 /* Pods-SpiderImgur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +485,7 @@
 		};
 		3E14E870226AEDA5006B8752 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C3651C828E408A156661245 /* Pods-SpiderImgur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
