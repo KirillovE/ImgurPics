@@ -15,7 +15,7 @@ class BaseRequestFactory: AbstractRequestFactory {
     let errorHandler: AbstractErrorHandler
     let sessionManager: SessionManager    
     let requestQueue: DispatchQueue?
-    let baseURL = URL(string: "https://api.imgur.com/3/")!
+    let baseURL = Constants.baseURL
     
     init(errorParser: AbstractErrorParser,
          errorHandler: AbstractErrorHandler,
