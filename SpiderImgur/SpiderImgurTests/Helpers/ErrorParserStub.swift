@@ -1,8 +1,8 @@
 //
 //  ErrorParserStub.swift
-//  GBShopTests
+//  SpiderImgurTests
 //
-//  Created by Евгений on 05/11/2018.
+//  Created by Евгений Кириллов on 20/04/2019.
 //  Copyright © 2018 Триада. All rights reserved.
 //
 

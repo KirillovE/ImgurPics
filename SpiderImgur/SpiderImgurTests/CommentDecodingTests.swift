@@ -19,6 +19,8 @@ class CommentDecodingTests: XCTestCase {
         let resultFileBundle = Bundle(for: CommentDecodingTests.self)
         let resultFileURL = resultFileBundle.url(forResource: "CommentResponseStub", withExtension: "json")!
         resultStub = try! Data(contentsOf: resultFileURL)
+        
+        super.setUp()
     }
 
     func testExample() {

@@ -17,7 +17,7 @@ struct ImageResponse: Decodable {
 struct ImageData: Decodable {
     let id: String
     let title: String
-    let images: [Image]
+    let images: [Image]?
 }
 
 /// Изображение, получаемое от сервера

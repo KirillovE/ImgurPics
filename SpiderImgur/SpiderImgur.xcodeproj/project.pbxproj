@@ -31,6 +31,13 @@
 		3E14E8A1226B34D4006B8752 /* ResponseStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E14E8A0226B34D4006B8752 /* ResponseStub.json */; };
 		3E14E8A3226B34E3006B8752 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8A2226B34E3006B8752 /* ResponseCodableTests.swift */; };
 		3E14E8A5226B3B78006B8752 /* ErrorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8A4226B3B78006B8752 /* ErrorParserTests.swift */; };
+		3E14E8A7226B7215006B8752 /* RequestsFactoryMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8A6226B7215006B8752 /* RequestsFactoryMaker.swift */; };
+		3E14E8A9226B75B2006B8752 /* RequestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8A8226B75B2006B8752 /* RequestsFactory.swift */; };
+		3E14E8AD226B7C6D006B8752 /* RequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8AC226B7C6D006B8752 /* RequestFactoryTests.swift */; };
+		3E14E8AF226B7CFF006B8752 /* ErrorHandlerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8AE226B7CFF006B8752 /* ErrorHandlerStub.swift */; };
+		3E14E8B1226BAE24006B8752 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8B0226BAE24006B8752 /* Constants.swift */; };
+		3E14E8B3226BB06A006B8752 /* FactoryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8B2226BB06A006B8752 /* FactoryAssembler.swift */; };
+		3E14E8B5226BB27F006B8752 /* FactoryAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8B4226BB27F006B8752 /* FactoryAssemblerTests.swift */; };
 		9733BED5AAAB72610B9CFBA0 /* Pods_SpiderImgurTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1928A31E6C1E61368EB3D3A0 /* Pods_SpiderImgurTests.framework */; };
 		D1B25C8A43915ACA004E4DA4 /* Pods_SpiderImgur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +85,13 @@
 		3E14E8A0226B34D4006B8752 /* ResponseStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ResponseStub.json; sourceTree = "<group>"; };
 		3E14E8A2226B34E3006B8752 /* ResponseCodableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		3E14E8A4226B3B78006B8752 /* ErrorParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParserTests.swift; sourceTree = "<group>"; };
+		3E14E8A6226B7215006B8752 /* RequestsFactoryMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsFactoryMaker.swift; sourceTree = "<group>"; };
+		3E14E8A8226B75B2006B8752 /* RequestsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsFactory.swift; sourceTree = "<group>"; };
+		3E14E8AC226B7C6D006B8752 /* RequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryTests.swift; sourceTree = "<group>"; };
+		3E14E8AE226B7CFF006B8752 /* ErrorHandlerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerStub.swift; sourceTree = "<group>"; };
+		3E14E8B0226BAE24006B8752 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3E14E8B2226BB06A006B8752 /* FactoryAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryAssembler.swift; sourceTree = "<group>"; };
+		3E14E8B4226BB27F006B8752 /* FactoryAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryAssemblerTests.swift; sourceTree = "<group>"; };
 		6C3651C828E408A156661245 /* Pods-SpiderImgur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderImgur.release.xcconfig"; path = "Target Support Files/Pods-SpiderImgur/Pods-SpiderImgur.release.xcconfig"; sourceTree = "<group>"; };
 		BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderImgur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -151,6 +165,8 @@
 				3E14E894226B2E57006B8752 /* CommentDecodingTests.swift */,
 				3E14E8A2226B34E3006B8752 /* ResponseCodableTests.swift */,
 				3E14E8A4226B3B78006B8752 /* ErrorParserTests.swift */,
+				3E14E8AC226B7C6D006B8752 /* RequestFactoryTests.swift */,
+				3E14E8B4226BB27F006B8752 /* FactoryAssemblerTests.swift */,
 				3E14E89F226B34B6006B8752 /* JSON stubs */,
 				3E14E89A226B3499006B8752 /* Helpers */,
 				3E14E86B226AEDA5006B8752 /* Info.plist */,
@@ -209,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				3E14E854226AEDA4006B8752 /* AppDelegate.swift */,
+				3E14E8B0226BAE24006B8752 /* Constants.swift */,
 				3E14E889226AFF17006B8752 /* Network */,
 				3E14E888226AF99E006B8752 /* Errors */,
 			);
@@ -228,6 +245,9 @@
 			isa = PBXGroup;
 			children = (
 				3E14E88A226AFF28006B8752 /* BaseRequestFactory.swift */,
+				3E14E8A6226B7215006B8752 /* RequestsFactoryMaker.swift */,
+				3E14E8A8226B75B2006B8752 /* RequestsFactory.swift */,
+				3E14E8B2226BB06A006B8752 /* FactoryAssembler.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -255,6 +275,7 @@
 			children = (
 				3E14E89C226B34AF006B8752 /* ErrorParserStub.swift */,
 				3E14E89B226B34AF006B8752 /* OStubHelper.swift */,
+				3E14E8AE226B7CFF006B8752 /* ErrorHandlerStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -463,12 +484,16 @@
 				3E14E87E226AF61A006B8752 /* AbstractRequestFactory.swift in Sources */,
 				3E14E886226AF747006B8752 /* AlertErrorHandler.swift in Sources */,
 				3E14E881226AF61A006B8752 /* RequestRouter.swift in Sources */,
+				3E14E8B1226BAE24006B8752 /* Constants.swift in Sources */,
 				3E14E88B226AFF28006B8752 /* BaseRequestFactory.swift in Sources */,
+				3E14E8B3226BB06A006B8752 /* FactoryAssembler.swift in Sources */,
+				3E14E8A9226B75B2006B8752 /* RequestsFactory.swift in Sources */,
 				3E14E882226AF61A006B8752 /* AbstractErrorHandler.swift in Sources */,
 				3E14E893226B2CD2006B8752 /* Comment.swift in Sources */,
 				3E14E855226AEDA4006B8752 /* AppDelegate.swift in Sources */,
 				3E14E87F226AF61A006B8752 /* AbstractErrorParser.swift in Sources */,
 				3E14E88F226B09F9006B8752 /* Image.swift in Sources */,
+				3E14E8A7226B7215006B8752 /* RequestsFactoryMaker.swift in Sources */,
 				3E14E880226AF61A006B8752 /* DataRequest+responseCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +503,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E14E895226B2E57006B8752 /* CommentDecodingTests.swift in Sources */,
+				3E14E8AD226B7C6D006B8752 /* RequestFactoryTests.swift in Sources */,
 				3E14E8A3226B34E3006B8752 /* ResponseCodableTests.swift in Sources */,
 				3E14E89E226B34AF006B8752 /* ErrorParserStub.swift in Sources */,
 				3E14E86A226AEDA5006B8752 /* ImageDecodingTests.swift in Sources */,
 				3E14E89D226B34AF006B8752 /* OStubHelper.swift in Sources */,
 				3E14E8A5226B3B78006B8752 /* ErrorParserTests.swift in Sources */,
+				3E14E8B5226BB27F006B8752 /* FactoryAssemblerTests.swift in Sources */,
+				3E14E8AF226B7CFF006B8752 /* ErrorHandlerStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

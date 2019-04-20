@@ -43,6 +43,7 @@ extension RequestRouter {
     func asURLRequest() throws -> URLRequest {
         var urlRequest = URLRequest(url: fullURL)
         urlRequest.httpMethod = method.rawValue
+        urlRequest.allHTTPHeaderFields = ["Authorization": Constants.clientID]
         
         switch self.encoding {
         case .url:
