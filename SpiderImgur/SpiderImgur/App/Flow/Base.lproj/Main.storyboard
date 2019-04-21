@@ -66,7 +66,7 @@
         <scene sceneID="v4B-ob-g3c">
             <objects>
                 <viewController id="ZyN-DG-RdS" customClass="CommentsController" customModule="SpiderImgur" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RPa-C6-RaC">
+                    <view key="view" contentMode="scaleToFill" id="RPa-C6-RaC" customClass="CommentsView" customModule="SpiderImgur" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -109,6 +109,9 @@
                             <constraint firstItem="Ma0-fn-pJe" firstAttribute="top" secondItem="Q8Y-f0-jmR" secondAttribute="top" id="tbQ-Fj-RPw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q8Y-f0-jmR"/>
+                        <connections>
+                            <outlet property="tableView" destination="Ma0-fn-pJe" id="qRn-LW-1UF"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Комментарии" id="GVI-HT-kUT"/>
                 </viewController>
