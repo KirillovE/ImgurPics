@@ -28,14 +28,16 @@ final class ImagesView: UIView, ImageList {
     private func configureCollection() {
         collectionView.register(UINib(nibName: "ImageCollectionCell", bundle: nil), forCellWithReuseIdentifier: reuseID)
         
-        let spacing = CGFloat(4)
+        let spacing: CGFloat = 4
+        let inset = spacing
+        let textHeight: CGFloat = 60
         let layout = UICollectionViewFlowLayout()
         let collectionWidth = collectionView.frame.width
-        let itemWidth = collectionWidth / 2 - spacing / 2 - spacing
-        let itemHeight = itemWidth + 60
+        let itemWidth = collectionWidth / 2 - spacing / 2 - inset
+        let itemHeight = itemWidth + textHeight
         layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
         layout.minimumInteritemSpacing = spacing
-        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        layout.sectionInset = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
         collectionView.collectionViewLayout = layout
     }
     
