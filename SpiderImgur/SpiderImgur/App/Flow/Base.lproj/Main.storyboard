@@ -66,11 +66,11 @@
             </objects>
             <point key="canvasLocation" x="896.79999999999995" y="752.47376311844084"/>
         </scene>
-        <!--Комментарии-->
+        <!--Детали-->
         <scene sceneID="v4B-ob-g3c">
             <objects>
-                <viewController id="ZyN-DG-RdS" customClass="CommentsController" customModule="SpiderImgur" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RPa-C6-RaC" customClass="CommentsView" customModule="SpiderImgur" customModuleProvider="target">
+                <viewController id="ZyN-DG-RdS" customClass="DetailsController" customModule="SpiderImgur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RPa-C6-RaC" customClass="DetailsView" customModule="SpiderImgur" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -117,7 +117,7 @@
                             <outlet property="tableView" destination="Ma0-fn-pJe" id="qRn-LW-1UF"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Комментарии" id="GVI-HT-kUT"/>
+                    <navigationItem key="navigationItem" title="Детали" id="GVI-HT-kUT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AaQ-OM-K4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

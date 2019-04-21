@@ -1,5 +1,5 @@
 //
-//  CommentsController.swift
+//  DetailsView.swift
 //  SpiderImgur
 //
 //  Created by Евгений Кириллов on 21/04/2019.
@@ -8,6 +8,8 @@
 
 import UIKit
 
-final class CommentsController: UIViewController {
+final class DetailsView: UIView {
 
+    @IBOutlet weak var tableView: UITableView!
+    
 }

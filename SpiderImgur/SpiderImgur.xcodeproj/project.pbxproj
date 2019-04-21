@@ -38,11 +38,11 @@
 		3E14E8B1226BAE24006B8752 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8B0226BAE24006B8752 /* Constants.swift */; };
 		3E14E8B3226BB06A006B8752 /* FactoryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8B2226BB06A006B8752 /* FactoryAssembler.swift */; };
 		3E14E8B5226BB27F006B8752 /* FactoryAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8B4226BB27F006B8752 /* FactoryAssemblerTests.swift */; };
-		3E14E8B9226C42D3006B8752 /* CommentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8B8226C42D3006B8752 /* CommentsController.swift */; };
+		3E14E8B9226C42D3006B8752 /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8B8226C42D3006B8752 /* DetailsController.swift */; };
 		3E14E8BC226C4488006B8752 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8BA226C4488006B8752 /* ImageCollectionCell.swift */; };
 		3E14E8BD226C4488006B8752 /* ImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E14E8BB226C4488006B8752 /* ImageCollectionCell.xib */; };
 		3E14E8C3226C5FBA006B8752 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8C2226C5FBA006B8752 /* ImagesView.swift */; };
-		3E14E8C9226C8B70006B8752 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8C8226C8B70006B8752 /* CommentsView.swift */; };
+		3E14E8C9226C8B70006B8752 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8C8226C8B70006B8752 /* DetailsView.swift */; };
 		3E14E8CB226C916C006B8752 /* ImageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E8CA226C916C006B8752 /* ImageProtocols.swift */; };
 		9733BED5AAAB72610B9CFBA0 /* Pods_SpiderImgurTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1928A31E6C1E61368EB3D3A0 /* Pods_SpiderImgurTests.framework */; };
 		D1B25C8A43915ACA004E4DA4 /* Pods_SpiderImgur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */; };
@@ -98,11 +98,11 @@
 		3E14E8B0226BAE24006B8752 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3E14E8B2226BB06A006B8752 /* FactoryAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryAssembler.swift; sourceTree = "<group>"; };
 		3E14E8B4226BB27F006B8752 /* FactoryAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryAssemblerTests.swift; sourceTree = "<group>"; };
-		3E14E8B8226C42D3006B8752 /* CommentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsController.swift; sourceTree = "<group>"; };
+		3E14E8B8226C42D3006B8752 /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
 		3E14E8BA226C4488006B8752 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		3E14E8BB226C4488006B8752 /* ImageCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionCell.xib; sourceTree = "<group>"; };
 		3E14E8C2226C5FBA006B8752 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
-		3E14E8C8226C8B70006B8752 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		3E14E8C8226C8B70006B8752 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		3E14E8CA226C916C006B8752 /* ImageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProtocols.swift; sourceTree = "<group>"; };
 		6C3651C828E408A156661245 /* Pods-SpiderImgur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderImgur.release.xcconfig"; path = "Target Support Files/Pods-SpiderImgur/Pods-SpiderImgur.release.xcconfig"; sourceTree = "<group>"; };
 		BE1FBE7CC5E44B65B291AFEB /* Pods_SpiderImgur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderImgur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,7 +278,7 @@
 			children = (
 				3E14E858226AEDA4006B8752 /* Main.storyboard */,
 				3E14E8BE226C45B5006B8752 /* Images screen */,
-				3E14E8BF226C45D5006B8752 /* Comments screen */,
+				3E14E8BF226C45D5006B8752 /* Details screen */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -315,13 +315,13 @@
 			path = "Images screen";
 			sourceTree = "<group>";
 		};
-		3E14E8BF226C45D5006B8752 /* Comments screen */ = {
+		3E14E8BF226C45D5006B8752 /* Details screen */ = {
 			isa = PBXGroup;
 			children = (
-				3E14E8B8226C42D3006B8752 /* CommentsController.swift */,
-				3E14E8C8226C8B70006B8752 /* CommentsView.swift */,
+				3E14E8B8226C42D3006B8752 /* DetailsController.swift */,
+				3E14E8C8226C8B70006B8752 /* DetailsView.swift */,
 			);
-			path = "Comments screen";
+			path = "Details screen";
 			sourceTree = "<group>";
 		};
 		F9CF029D68A03C13AE813311 /* Frameworks */ = {
@@ -516,9 +516,9 @@
 			files = (
 				3E14E857226AEDA4006B8752 /* ImagesController.swift in Sources */,
 				3E14E887226AF747006B8752 /* AppErrorParser.swift in Sources */,
-				3E14E8C9226C8B70006B8752 /* CommentsView.swift in Sources */,
+				3E14E8C9226C8B70006B8752 /* DetailsView.swift in Sources */,
 				3E14E87E226AF61A006B8752 /* AbstractRequestFactory.swift in Sources */,
-				3E14E8B9226C42D3006B8752 /* CommentsController.swift in Sources */,
+				3E14E8B9226C42D3006B8752 /* DetailsController.swift in Sources */,
 				3E14E886226AF747006B8752 /* AlertErrorHandler.swift in Sources */,
 				3E14E881226AF61A006B8752 /* RequestRouter.swift in Sources */,
 				3E14E8BC226C4488006B8752 /* ImageCollectionCell.swift in Sources */,
