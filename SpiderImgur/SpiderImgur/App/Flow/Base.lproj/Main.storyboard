@@ -104,7 +104,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-ag-ubu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-ag-ubu">
                                 <rect key="frame" x="0.0" y="116" width="375" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zBY-ag-ubu" secondAttribute="height" multiplier="16:9" id="Lxq-hR-imO"/>
@@ -153,4 +153,7 @@
             <point key="canvasLocation" x="141.59999999999999" y="753.37331334332839"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="63.666667938232422" height="63.666667938232422"/>
+    </resources>
 </document>
