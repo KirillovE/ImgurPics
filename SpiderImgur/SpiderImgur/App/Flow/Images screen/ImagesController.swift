@@ -23,6 +23,13 @@ final class ImagesController: UIViewController, ImagesDataSource {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let controller = segue.destination as? DetailsController,
+            let row = sender as? Int else { return }
+        controller.configure(withModel: images[row])
+    }
+    
     private func loadImages() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         requestFactory.fetchImages(page: nextPage) { [weak self] imageResponse in
@@ -39,7 +46,7 @@ final class ImagesController: UIViewController, ImagesDataSource {
 extension ImagesController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showComments", sender: nil)
+        performSegue(withIdentifier: "showComments", sender: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
