@@ -1,5 +1,5 @@
 //
-//  ImagesViewController.swift
+//  ImagesController.swift
 //  SpiderImgur
 //
 //  Created by Евгений Кириллов on 20/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImagesViewController: UIViewController {
+class ImagesController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

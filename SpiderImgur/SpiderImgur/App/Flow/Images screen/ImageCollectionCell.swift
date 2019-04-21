@@ -1,5 +1,5 @@
 //
-//  ImageCollectionViewCell.swift
+//  ImageCollectionCell.swift
 //  SpiderImgur
 //
 //  Created by Евгений Кириллов on 21/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageCollectionViewCell: UICollectionViewCell {
+class ImageCollectionCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

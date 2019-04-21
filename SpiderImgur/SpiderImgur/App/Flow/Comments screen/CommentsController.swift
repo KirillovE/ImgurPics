@@ -1,5 +1,5 @@
 //
-//  CommentsViewController.swift
+//  CommentsController.swift
 //  SpiderImgur
 //
 //  Created by Евгений Кириллов on 21/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommentsViewController: UIViewController {
+class CommentsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
