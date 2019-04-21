@@ -10,6 +10,7 @@ import UIKit
 
 final class DetailsView: UIView {
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
 }

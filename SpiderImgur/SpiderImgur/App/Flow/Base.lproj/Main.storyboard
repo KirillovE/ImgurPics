@@ -74,12 +74,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ma0-fn-pJe">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ma0-fn-pJe">
+                                <rect key="frame" x="0.0" y="327" width="375" height="340"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentCell" textLabel="VkU-YI-yQx" detailTextLabel="Q9D-hp-uqR" rowHeight="123" style="IBUITableViewCellStyleSubtitle" id="arK-qN-OJX">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="123"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="arK-qN-OJX" id="8pK-Ed-eZL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
@@ -104,16 +104,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-ag-ubu">
+                                <rect key="frame" x="0.0" y="116" width="375" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zBY-ag-ubu" secondAttribute="height" multiplier="16:9" id="Lxq-hR-imO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q8Y-f0-jmR" firstAttribute="trailing" secondItem="Ma0-fn-pJe" secondAttribute="trailing" id="7fb-NA-MB2"/>
                             <constraint firstItem="Q8Y-f0-jmR" firstAttribute="bottom" secondItem="Ma0-fn-pJe" secondAttribute="bottom" id="BrA-ZY-Zsf"/>
+                            <constraint firstItem="zBY-ag-ubu" firstAttribute="leading" secondItem="Q8Y-f0-jmR" secondAttribute="leading" id="Oz4-3K-atK"/>
                             <constraint firstItem="Ma0-fn-pJe" firstAttribute="leading" secondItem="Q8Y-f0-jmR" secondAttribute="leading" id="d36-Hb-mpa"/>
-                            <constraint firstItem="Ma0-fn-pJe" firstAttribute="top" secondItem="Q8Y-f0-jmR" secondAttribute="top" id="tbQ-Fj-RPw"/>
+                            <constraint firstItem="Q8Y-f0-jmR" firstAttribute="trailing" secondItem="zBY-ag-ubu" secondAttribute="trailing" id="ijo-cn-EAo"/>
+                            <constraint firstItem="zBY-ag-ubu" firstAttribute="top" secondItem="Q8Y-f0-jmR" secondAttribute="top" id="jzI-L4-r1Q"/>
+                            <constraint firstItem="Ma0-fn-pJe" firstAttribute="top" secondItem="zBY-ag-ubu" secondAttribute="bottom" id="n1O-dq-3Bt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q8Y-f0-jmR"/>
                         <connections>
+                            <outlet property="imageView" destination="zBY-ag-ubu" id="J9g-8A-g3P"/>
                             <outlet property="tableView" destination="Ma0-fn-pJe" id="qRn-LW-1UF"/>
                         </connections>
                     </view>
