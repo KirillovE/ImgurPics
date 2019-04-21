@@ -15,6 +15,27 @@ final class DetailsController: UIViewController, DetailsDataSource {
     var imageURL: URL?
     
     private var imageID: String?
+    private let requestFactory = FactoryAssembler().assembleRequestFactory()
+    private var customView: DetailsList? {
+        return viewIfLoaded as? DetailsList
+    }
+    
+    override func viewDidLoad() {
+        super .viewDidLoad()
+        loadComments()
+    }
+    
+    private func loadComments() {
+        guard let imageID = imageID else { return }
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        requestFactory.fetchComments(forImage: imageID) { [weak self] commentResponse in
+            self?.comments = commentResponse.data
+            self?.customView?.update()
+            DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
+        }
+    }
     
 }
 
