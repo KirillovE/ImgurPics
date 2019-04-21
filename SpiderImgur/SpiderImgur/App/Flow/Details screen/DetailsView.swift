@@ -8,9 +8,16 @@
 
 import UIKit
 
-final class DetailsView: UIView {
-
+final class DetailsView: UIView, DetailsList {
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    var listDataSource: DetailsDataSource?
+    
+    func update() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
     
 }

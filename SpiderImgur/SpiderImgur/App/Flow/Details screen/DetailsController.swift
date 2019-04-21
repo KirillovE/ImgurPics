@@ -8,21 +8,32 @@
 
 import UIKit
 
-final class DetailsController: UIViewController {
+final class DetailsController: UIViewController, DetailsDataSource {
     
-    /// Изображение для показа детальной информации
-    var imageViewModel: ImageViewModel? {
-        didSet {
-            guard let model = imageViewModel else { return }
-            details["Название"] = model.title
-            details["Количество просмотров"] = String(model.views)
-            details["Количество добавлений в избранное"] = String(model.favoriteCount)
-            details["Количество комментариев"] = String(model.commentCount)
-            
-            guard let description = model.description else { return  }
-            details["Описание"] = description
-        }
+    var imageDetails: [String: String] = [:]
+    var comments: [Comment] = []
+    var imageURL: URL?
+    
+    private var imageID: String?
+    
+}
+
+extension DetailsController {
+    
+    /// Настройка контроллера
+    ///
+    /// - Parameter model: Модель изображения для настройки
+    func configure(withModel model: ImageViewModel) {
+        imageDetails["Название"] = model.title
+        imageDetails["Количество просмотров"] = String(model.views)
+        imageDetails["Количество добавлений в избранное"] = String(model.favoriteCount)
+        imageDetails["Количество комментариев"] = String(model.commentCount)
+        
+        guard let description = model.description else { return  }
+        imageDetails["Описание"] = description
+        
+        imageURL = URL(string: model.address)
+        imageID = model.id
     }
     
-    private var details: [String: String] = [:]
 }
