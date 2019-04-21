@@ -8,15 +8,8 @@
 
 import UIKit
 
-class ImagesView: UIView {
+final class ImagesView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

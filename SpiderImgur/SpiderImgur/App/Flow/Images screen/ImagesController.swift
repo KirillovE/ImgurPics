@@ -8,13 +8,7 @@
 
 import UIKit
 
-class ImagesController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
+final class ImagesController: UIViewController {
 
 }
 

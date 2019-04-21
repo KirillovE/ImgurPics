@@ -8,11 +8,6 @@
 
 import UIKit
 
-class ImageCollectionCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+final class ImageCollectionCell: UICollectionViewCell {
 
 }
