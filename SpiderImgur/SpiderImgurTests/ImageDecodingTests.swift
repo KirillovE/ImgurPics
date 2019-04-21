@@ -30,18 +30,14 @@ class ImageDecodingTests: XCTestCase {
     }
     
     private func validateFields(ofResponse response: ImageResponse?) -> Bool {
-        let statusIsValid = response?.status == 200
-        let successIsValid = response?.success == true
-        let dataIdIsValid = response?.data.first?.id == "H0TBp"
-        let dataTitleIsValid = response?.data.first?.title == "It's nice to be nice dump"
-        let imageIdIsValid = response?.data.first?.images?.first?.id == "tiAxps3"
-        let imageLinkIsValid = response?.data.first?.images?.first?.link == "https://i.imgur.com/tiAxps3.jpg"
+        let countIsValid = response?.images.count == 1
+        let dataIdIsValid = response?.images.first?.id == "H0TBp"
+        let dataTitleIsValid = response?.images.first?.title == "It's nice to be nice dump"
+        let imageLinkIsValid = response?.images.first?.address == "https://i.imgur.com/tiAxps3.jpg"
         
-        return statusIsValid
-            && successIsValid
+        return countIsValid
             && dataIdIsValid
             && dataTitleIsValid
-            && imageIdIsValid
             && imageLinkIsValid
     }
 

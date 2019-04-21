@@ -8,9 +8,32 @@
 
 /// Ответ сервера на запрос
 struct ImageResponse: Decodable {
-    let data: [ImageData]
-    let success: Bool
-    let status: Int
+    let images: [ImageViewModel]
+    
+    enum TopCodingKeys: String, CodingKey {
+        case data
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: TopCodingKeys.self)
+        
+        var dataContainer = try container.nestedUnkeyedContainer(forKey: .data)
+        var imageDatas = [ImageData]()
+        while !dataContainer.isAtEnd {
+            let imageData = try dataContainer.decode(ImageData.self)
+            imageDatas.append(imageData)
+        }
+        
+        images = imageDatas.flatMap { imageData -> [ImageViewModel] in
+            let id = imageData.id
+            let title = imageData.title
+            let images = imageData.images ?? []
+            return images.map {
+                return ImageViewModel(id: id, address: $0.link, title: title)
+            }
+        }
+        
+    }
 }
 
 /// Информация об изображении с сервера
@@ -24,22 +47,4 @@ struct ImageData: Decodable {
 struct Image: Decodable {
     let id: String
     let link: String
-}
-
-extension ImageResponse {
-    
-    /// Отобразить в удобную для представления структуру
-    ///
-    /// - Returns: Массив структур для представления
-    func mapToViewModel() -> [ImageViewModel] {
-        return data.flatMap { imageData -> [ImageViewModel] in
-            let id = imageData.id
-            let title = imageData.title
-            let images = imageData.images ?? []
-            return images.map {
-                return ImageViewModel(id: id, address: $0.link, title: title)
-            }
-        }
-    }
-    
 }
