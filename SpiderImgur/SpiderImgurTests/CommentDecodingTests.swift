@@ -30,15 +30,10 @@ class CommentDecodingTests: XCTestCase {
     }
     
     private func validateFields(ofResponse response: CommentResponse?) -> Bool {
-        let statusIsValid = response?.status == 200
-        let successIsValid = response?.success == true
         let commentIdIsValid = response?.data.first?.id == 1053911831
         let commentTextIsValid = response?.data.first?.comment == "Onions.  Onions everywhere"
         
-        return statusIsValid
-            && successIsValid
-            && commentIdIsValid
-            && commentTextIsValid
+        return commentIdIsValid && commentTextIsValid
     }
 
 }

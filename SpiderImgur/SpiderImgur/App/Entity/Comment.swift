@@ -9,8 +9,6 @@
 /// Ответ сервера на запрос
 struct CommentResponse: Decodable {
     let data: [Comment]
-    let success: Bool
-    let status: Int
 }
 
 /// Комментарий
