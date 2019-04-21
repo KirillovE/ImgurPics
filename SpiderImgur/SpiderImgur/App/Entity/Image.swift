@@ -11,6 +11,10 @@ struct ImageViewModel {
     let id: String
     let address: String
     let title: String
+    let views: Int
+    let commentCount: Int
+    let favoriteCount: Int
+    let description: String?
 }
 
 /// Ответ сервера на запрос
@@ -34,9 +38,18 @@ struct ImageResponse: Decodable {
         images = imageDatas.flatMap { imageData -> [ImageViewModel] in
             let id = imageData.id
             let title = imageData.title
+            let viewsCount = imageData.views
+            let commentsCount = imageData.commentCount
+            let favoriteCount = imageData.favoriteCount
             let images = imageData.images ?? []
             return images.map {
-                return ImageViewModel(id: id, address: $0.link, title: title)
+                return ImageViewModel(id: id,
+                                      address: $0.link,
+                                      title: title,
+                                      views: viewsCount,
+                                      commentCount: commentsCount,
+                                      favoriteCount: favoriteCount,
+                                      description: $0.description)
             }
         }
         
@@ -47,6 +60,9 @@ struct ImageResponse: Decodable {
 struct ImageData: Decodable {
     let id: String
     let title: String
+    let views: Int
+    let commentCount: Int
+    let favoriteCount: Int
     let images: [Image]?
 }
 
@@ -54,4 +70,5 @@ struct ImageData: Decodable {
 struct Image: Decodable {
     let id: String
     let link: String
+    let description: String?
 }
