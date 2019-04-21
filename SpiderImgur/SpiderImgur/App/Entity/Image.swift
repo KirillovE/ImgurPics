@@ -25,3 +25,21 @@ struct Image: Decodable {
     let id: String
     let link: String
 }
+
+extension ImageResponse {
+    
+    /// Отобразить в удобную для представления структуру
+    ///
+    /// - Returns: Массив структур для представления
+    func mapToViewModel() -> [ImageViewModel] {
+        return data.flatMap { imageData -> [ImageViewModel] in
+            let id = imageData.id
+            let title = imageData.title
+            let images = imageData.images ?? []
+            return images.map {
+                return ImageViewModel(id: id, address: $0.link, title: title)
+            }
+        }
+    }
+    
+}
