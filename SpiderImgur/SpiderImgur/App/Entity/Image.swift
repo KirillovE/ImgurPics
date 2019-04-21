@@ -6,6 +6,13 @@
 //  Copyright © 2019 Триада. All rights reserved.
 //
 
+/// Структура для представления информации об изображении
+struct ImageViewModel {
+    let id: String
+    let address: String
+    let title: String
+}
+
 /// Ответ сервера на запрос
 struct ImageResponse: Decodable {
     let images: [ImageViewModel]
