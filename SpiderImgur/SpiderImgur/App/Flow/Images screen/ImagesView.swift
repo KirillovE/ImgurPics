@@ -63,7 +63,9 @@ extension ImagesView: UICollectionViewDataSource {
         }
         
         let placeholderImage = UIImage(named: "logo")
-        cell.imageView.af_setImage(withURL: imageURL, placeholderImage: placeholderImage)
+        cell.imageView.af_setImage(withURL: imageURL,
+                                   placeholderImage: placeholderImage,
+                                   progressQueue: .global(qos: .background))
         cell.titleLabel.text = imageViewModel.title
         
         return cell
