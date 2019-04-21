@@ -18,6 +18,10 @@ final class DetailsView: UIView, DetailsList {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    override func layoutSubviews() {
+        super .layoutSubviews()
         setImage()
     }
     
@@ -38,6 +42,17 @@ extension DetailsView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Детальная информация"
+        case 1:
+            return "Комментарии"
+        default:
+            return nil
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

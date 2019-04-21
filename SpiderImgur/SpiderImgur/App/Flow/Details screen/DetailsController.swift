@@ -21,7 +21,8 @@ final class DetailsController: UIViewController, DetailsDataSource {
     }
     
     override func viewDidLoad() {
-        super .viewDidLoad()
+        super.viewDidLoad()
+        customView?.listDataSource = self
         loadComments()
     }
     
@@ -50,11 +51,11 @@ extension DetailsController {
         imageDetails["Количество добавлений в избранное"] = String(model.favoriteCount)
         imageDetails["Количество комментариев"] = String(model.commentCount)
         
-        guard let description = model.description else { return  }
-        imageDetails["Описание"] = description
-        
         imageURL = URL(string: model.address)
         imageID = model.id
+        
+        guard let description = model.description else { return  }
+        imageDetails["Описание"] = description
     }
     
 }
