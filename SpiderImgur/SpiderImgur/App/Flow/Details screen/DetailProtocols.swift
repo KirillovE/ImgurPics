@@ -6,6 +6,8 @@
 //  Copyright © 2019 Триада. All rights reserved.
 //
 
+import Foundation
+
 /// Источник данных в виде детальной информации об изображении
 protocol DetailsDataSource: AnyObject {
     
@@ -14,6 +16,9 @@ protocol DetailsDataSource: AnyObject {
     
     /// Подробности об изображении
     var imageDetails: [String: String] { get set }
+    
+    /// Адрес изображения
+    var imageURL: URL? { get }
 }
 
 /// Определяет правила для работы с детальной информацией об изображении
