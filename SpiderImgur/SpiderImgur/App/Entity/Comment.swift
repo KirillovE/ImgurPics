@@ -15,4 +15,5 @@ struct CommentResponse: Decodable {
 struct Comment: Decodable {
     let id: Int
     let comment: String
+    let author: String
 }
