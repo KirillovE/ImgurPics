@@ -31,3 +31,10 @@ final class ImagesController: UIViewController, ImagesDataSource {
 
 }
 
+extension ImagesController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showComments", sender: nil)
+    }
+    
+}

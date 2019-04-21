@@ -35,13 +35,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="109" height="210"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
-                                        <connections>
-                                            <segue destination="ZyN-DG-RdS" kind="show" id="98S-KP-eai"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="8bC-Xf-vdC" id="EQe-kx-zLy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iwC-Lc-4A3"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -60,6 +58,9 @@
                     <navigationItem key="navigationItem" title="Популярное" id="hTj-dF-y56">
                         <barButtonItem key="backBarButtonItem" title=" " id="QyD-yi-EFC"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ZyN-DG-RdS" kind="show" identifier="showComments" id="s1x-SC-e1A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
