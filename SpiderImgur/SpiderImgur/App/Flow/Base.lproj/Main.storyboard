@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="enH-hG-mzK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,12 +14,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="Популярное" id="BYZ-38-t0r" customClass="ImagesController" customModule="SpiderImgur" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ImagesView" customModule="SpiderImgur" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gzd-bP-CuK">
-                                <rect key="frame" x="0.0" y="116" width="600" height="484"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yUM-Qr-NTe">
                                     <size key="itemSize" width="132" height="142"/>
@@ -36,6 +40,9 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="oGO-Vb-YP1"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,6 +53,9 @@
                             <constraint firstItem="gzd-bP-CuK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h6o-fT-lTo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="collectionView" destination="gzd-bP-CuK" id="HGK-aC-EYI"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Популярное" id="hTj-dF-y56">
                         <barButtonItem key="backBarButtonItem" title=" " id="QyD-yi-EFC"/>
@@ -60,29 +70,29 @@
             <objects>
                 <viewController id="ZyN-DG-RdS" customClass="CommentsController" customModule="SpiderImgur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RPa-C6-RaC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ma0-fn-pJe">
-                                <rect key="frame" x="0.0" y="116" width="600" height="484"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentCell" textLabel="VkU-YI-yQx" detailTextLabel="Q9D-hp-uqR" rowHeight="123" style="IBUITableViewCellStyleSubtitle" id="arK-qN-OJX">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="123"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="arK-qN-OJX" id="8pK-Ed-eZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="122.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Чей-то комментарий будет здесь. Он может быть очень длинным" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VkU-YI-yQx">
-                                                    <rect key="frame" x="15" y="41" width="528.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="31" width="306" height="41"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Иванов Пётр Васильевич" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q9D-hp-uqR">
-                                                    <rect key="frame" x="15" y="64.5" width="147.5" height="14.5"/>
+                                                    <rect key="frame" x="15" y="75" width="147.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <nil key="textColor"/>
